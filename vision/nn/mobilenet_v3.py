@@ -64,7 +64,7 @@ class SqueezeBlock(nn.Module):
         return out * x
 
 class InvertedResidual(nn.Module):
-    def __init__(self, inp, oup, stride, expand_ratio, use_batch_norm=True, onnx_compatible=False):
+    def __init__(self, inp, oup, stride, expand_ratio, use_batch_norm=True, onnx_compatible=True):
         super(InvertedResidual, self).__init__()
         ReLU = nn.ReLU if onnx_compatible else nn.ReLU6
 
